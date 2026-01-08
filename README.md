@@ -1,52 +1,99 @@
-# Developer Portfolio
+# Sayandeep Das - Developer Portfolio
 
-A minimal, professional developer portfolio website built with **Next.js 14+**, **TypeScript**, and **Tailwind CSS**.
+My personal developer portfolio showcasing my journey as a Full-Stack Developer, featuring major projects, professional experience, and technical expertise.
 
-![Portfolio Preview](https://via.placeholder.com/1200x630/ffffff/000000?text=Developer+Portfolio)
+**Live Portfolio**: [View Portfolio](#) <!-- Add your deployed URL here -->
 
-## 🚀 Features
+---
 
-- ✅ **Modern Stack**: Next.js 14+ (App Router), TypeScript, Tailwind CSS
-- ✅ **Minimal Design**: Clean, professional aesthetic with generous spacing
-- ✅ **Data-Driven**: All content in typed TypeScript files for easy customization
-- ✅ **SEO Optimized**: Proper metadata and semantic HTML
-- ✅ **Responsive**: Mobile-first design that works on all devices
-- ✅ **Visitor Counter**: Track portfolio visits with built-in API
-- ✅ **Smooth Animations**: Subtle Framer Motion effects
-- ✅ **Production Ready**: Optimized build for Vercel deployment
+## 👨‍💻 About This Portfolio
 
-## 📋 Sections
+This is my personal portfolio website built with modern web technologies to showcase my work as a Full-Stack Developer. It features my major projects, professional experience at **Kagaar** and **Wolf Pixel Ltd.**, education from **IIT Guwahati**, and certifications from **Stanford**, **UC Irvine**, **Google**, and **Udemy**.
 
-1. **Navbar** - Sticky header with resume and call-to-action buttons
-2. **Hero** - Name, tagline, and social links
-3. **Skills** - Technical skills grid with icons
-4. **Experience** - Work history timeline
-5. **Projects** - Portfolio projects with tech stack and links
-6. **Education** - Educational background
-7. **Visitor Counter** - Real-time visitor tracking
-8. **Footer** - Copyright and social links
+## 🚀 Featured Projects
+
+### 1. **Fluxhire AI** - Automating Interviews for Hiring Process
+AI-powered interview platform with resume parsing, dynamic Q&A, and automated scoring using React, Redux, and OpenAI GPT models. Improved interviewer efficiency by reducing manual review by 70%.
+
+**Tech Stack**: React.js, Redux, Node.js, OpenAI API, Tailwind CSS  
+**GitHub**: [View Repository](https://github.com/sayandeepdas02/Flux-Hire-AI)
+
+### 2. **Plixa Meetups** - Collaborative App for Discussions & Planning
+Real-time collaborative board with drawing and live video chat using WebRTC and Socket.io. Enhanced collaboration with low-latency, seamless communication, and responsive UI.
+
+**Tech Stack**: JavaScript, React.js, Node.js, Socket.io, Express.js, Tailwind CSS  
+**GitHub**: [View Repository](https://github.com/sayandeepdas02/Plixa-Meetups)
+
+### 3. **Swift Invoice** - Modern Invoicing Solution
+MERN app to generate PDF invoices with payment modes and QR codes for instant payments. Developed secure REST APIs and optimized MongoDB for efficient invoice management.
+
+**Tech Stack**: JavaScript, React.js, Node.js, Socket.io, Express.js, Tailwind CSS  
+**GitHub**: [View Repository](https://github.com/sayandeepdas02/Swift-Invoice)
+
+### 4. **Plinko** - Physics-Based Gambling Game
+Interactive physics-based Plinko game with real-time win/loss logic, secure authentication, and betting mechanics. Delivered engaging gameplay with risk-reward mechanics and responsive design.
+
+**Tech Stack**: TypeScript, React.js, Node.js, Express.js, Tailwind CSS  
+**GitHub**: [View Repository](https://github.com/sayandeepdas02/Plinko)
+
+## 💼 Professional Experience
+
+### Software Engineer Intern @ **Kagaar** (Mar 2025 - May 2025)
+*Remote (Delhi, IN)*
+- Redesigned core sections of the website by developing modular, reusable React components
+- Improved page load speed by 25% and reduced code duplication
+- Increased user engagement by 15% through enhanced navigation flow and cross-device responsiveness
+
+### Software Engineer Intern @ **Wolf Pixel Ltd.** (Dec 2024 - Feb 2025)
+*Remote (London, UK)*
+- Built and deployed end-to-end full-stack web applications using React.js, Node.js, and REST APIs
+- Reduced feature development time by 30%
+- Designed and launched 4 high-conversion landing pages for international clients (Australia & UAE)
+- Contributed to a 15% average increase in lead generation
+
+## 🎓 Education
+
+**Bachelor of Science in Data Science and Artificial Intelligence**  
+Indian Institute of Technology (IIT) Guwahati | 2024 - 2027
+
+**Bachelor of Science in Mathematics (Hons), Computer Science & Physics**  
+WB State University | 2022 - 2026
+
+## 🏆 Certifications
+
+- **Machine Learning Specialisation** - Stanford University (Sept 2024)
+- **Project Management Specialisation** - University of California Irvine (Oct 2024)
+- **Full Stack Development Bootcamp 2024** - Angela Yu (Udemy)
+- **Generative AI** - Google (2024)
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [Next.js 14+](https://nextjs.org/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Deployment**: [Vercel](https://vercel.com/)
+**Frontend**: HTML, CSS, JavaScript, TypeScript, React.js, Redux, Next.js, Tailwind CSS  
+**Backend**: Python, Node.js, Express.js, REST APIs, Socket.io, WebRTC  
+**Database**: MongoDB, SQL  
+**Tools**: Git/GitHub, Vite, Postman, OpenAI API
+
+## 🏗️ Portfolio Tech Stack
+
+This portfolio is built with:
+- **Framework**: Next.js 14+ (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: Vercel
 
 ## 📦 Getting Started
 
 ### Prerequisites
-
 - Node.js 18+ and npm
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
-cd portfolio
+git clone https://github.com/sayandeepdas02/My-Portfolio.git
+cd My-Portfolio
 
 # Install dependencies
 npm install
@@ -55,85 +102,41 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view your portfolio.
-
-## ✏️ Customization
-
-### 1. Update Personal Information
-
-Edit the data files in the `data/` directory:
-
-- **`data/social.ts`** - Social media links, resume URL, booking link
-- **`data/skills.ts`** - Your technical skills
-- **`data/experience.ts`** - Work experience
-- **`data/projects.ts`** - Portfolio projects
-- **`data/education.ts`** - Educational background
-
-### 2. Update Hero Section
-
-Edit `components/Hero.tsx`:
-- Change "Your Name" to your actual name
-- Update the tagline/description
-
-### 3. Update SEO Metadata
-
-Edit `app/layout.tsx`:
-- Update title, description, keywords
-- Change author name
-
-### 4. Add Your Resume
-
-Replace `public/resume.pdf` with your actual resume file.
-
-### 5. Add Project Images
-
-Add project screenshots to `public/images/` and update the `image` field in `data/projects.ts`.
-
-## 🚀 Deployment
-
-### Deploy to Vercel (Recommended)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
-
-1. Push your code to GitHub
-2. Import your repository on [Vercel](https://vercel.com)
-3. Click "Deploy"
-
-Your portfolio will be live in seconds!
-
-### Build for Production
-
-```bash
-npm run build
-npm start
-```
+Open [http://localhost:3000](http://localhost:3000) to view the portfolio locally.
 
 ## 📁 Project Structure
 
 ```
-portfolio/
+My-Portfolio/
 ├── app/
 │   ├── api/visit/          # Visitor counter API
-│   ├── layout.tsx          # Root layout with SEO
-│   ├── page.tsx            # Main page
-│   └── globals.css         # Global styles
-├── components/             # React components
-├── data/                   # Content data files
-├── public/                 # Static assets
+│   ├── layout.tsx          # Root layout with SEO metadata
+│   ├── page.tsx            # Main portfolio page
+│   └── globals.css         # Global styles & design system
+├── components/             # React components (Hero, Projects, Skills, etc.)
+├── data/                   # Content data files (TypeScript)
+│   ├── projects.ts         # Project information
+│   ├── experience.ts       # Work experience
+│   ├── education.ts        # Educational background
+│   ├── certifications.ts   # Certifications
+│   ├── skills.ts           # Technical skills
+│   └── social.ts           # Social links & contact info
+├── public/                 # Static assets (images, logos, resume)
+│   ├── images/             # Project screenshots
+│   └── logos/              # Company & institution logos
 └── package.json
 ```
 
 ## 🎨 Design Philosophy
 
-This portfolio follows a **minimal, professional** design approach:
+This portfolio follows a **minimal, professional** design approach inspired by modern developer portfolios:
 
-- **White background** with neutral colors
-- **Large spacing** for readability
-- **Subtle animations** that don't distract
-- **Clean typography** using Inter font
+- **Clean aesthetic** with neutral colors and subtle accents
+- **Generous spacing** for enhanced readability
+- **Subtle animations** using Framer Motion
+- **Typography** using Inter font family
 - **Mobile-first** responsive design
-
-Inspired by modern developer portfolios with a focus on content over decoration.
+- **Content-focused** layout with clear visual hierarchy
 
 ## 📝 Available Scripts
 
@@ -144,25 +147,24 @@ npm start        # Start production server
 npm run lint     # Run ESLint
 ```
 
-## 🔧 Upgrading the Visitor Counter
+## 🚀 Deployment
 
-The visitor counter currently uses file-based storage. For production, consider upgrading to:
+This portfolio is optimized for deployment on **Vercel**:
 
-- **Vercel KV** (Redis)
-- **MongoDB**
-- **PostgreSQL**
-- **Supabase**
+1. Push your code to GitHub
+2. Import your repository on [Vercel](https://vercel.com)
+3. Click "Deploy"
 
-Update `app/api/visit/route.ts` to use your preferred database.
+Your portfolio will be live in seconds!
 
-## 📄 License
+## 📧 Contact
 
-MIT License - feel free to use this template for your own portfolio!
+Feel free to reach out for collaborations or opportunities!
 
-## 🤝 Contributing
-
-This is a personal portfolio template. Feel free to fork and customize for your own use!
+- **Email**: [Your Email]
+- **GitHub**: [github.com/sayandeepdas02](https://github.com/sayandeepdas02)
+- **LinkedIn**: [Your LinkedIn]
 
 ---
 
-**Built with ❤️ using Next.js and TypeScript**
+**Built with ❤️ by Sayandeep Das using Next.js and TypeScript**
