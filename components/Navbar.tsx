@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Moon, Sun, Calendar } from "lucide-react";
+import { Github, Moon, Sun, Calendar, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
     const [isDark, setIsDark] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         // Check for saved theme preference or default to light
@@ -35,66 +36,112 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="sticky top-0 z-50 backdrop-blur-md border-b border-edge bg-background/80">
-            <div className="px-4 h-14 flex items-center justify-between">
-                {/* Left: Portfolio Title */}
-                <Link href="/" className="text-sm font-medium text-foreground hover:text-muted-foreground transition-colors">
-                    Portfolio
-                </Link>
+        <>
+            <nav className="sticky top-0 z-50 backdrop-blur-md border-b border-edge bg-background/80">
+                <div className="px-4 h-14 flex items-center justify-between">
+                    {/* Left: Portfolio Title */}
+                    <Link href="/" className="text-sm font-medium text-foreground hover:text-muted-foreground transition-colors">
+                        Portfolio
+                    </Link>
 
-                {/* Center: Navigation Links */}
-                <div className="flex items-center gap-6">
-                    <button
-                        onClick={() => scrollToSection('projects')}
-                        className="text-[13px] font-medium text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                        Projects
-                    </button>
-                    <button
-                        onClick={() => scrollToSection('experience')}
-                        className="text-[13px] font-medium text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                        Experience
-                    </button>
-                    <button
-                        onClick={() => scrollToSection('education')}
-                        className="text-[13px] font-medium text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                        Education
-                    </button>
-                </div>
+                    {/* Desktop: Center Navigation Links */}
+                    <div className="hidden md:flex items-center gap-6">
+                        <button
+                            onClick={() => scrollToSection('projects')}
+                            className="text-[13px] font-medium text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                            Projects
+                        </button>
+                        <button
+                            onClick={() => scrollToSection('experience')}
+                            className="text-[13px] font-medium text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                            Experience
+                        </button>
+                        <button
+                            onClick={() => scrollToSection('education')}
+                            className="text-[13px] font-medium text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                            Education
+                        </button>
+                    </div>
 
-                {/* Book a Call Button */}
-                <a
-                    href="https://cal.com/sayandeep-3n4b6i"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-3 py-1.5 text-[13px] font-medium bg-foreground text-background hover:bg-foreground/90 transition-colors rounded-md"
-                >
-                    <Calendar size={14} strokeWidth={2} />
-                    Book a Call
-                </a>
-
-                {/* Right: GitHub & Dark Mode */}
-                <div className="flex items-center gap-3">
+                    {/* Desktop: Book a Call Button */}
                     <a
-                        href="https://github.com/sayandeepdas02/portfolio"
+                        href="https://cal.com/sayandeep-3n4b6i"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 text-muted-foreground hover:text-foreground transition-colors"
-                        aria-label="GitHub"
+                        className="hidden md:flex items-center gap-2 px-3 py-1.5 text-[13px] font-medium bg-foreground text-background hover:bg-foreground/90 transition-colors rounded-md"
                     >
-                        <Github size={18} strokeWidth={1.5} />
+                        <Calendar size={14} strokeWidth={2} />
+                        Book a Call
                     </a>
-                    <button
-                        onClick={toggleTheme}
-                        className="p-2 text-muted-foreground hover:text-foreground transition-colors"
-                        aria-label="Toggle theme"
-                    >
-                        {isDark ? <Sun size={18} strokeWidth={1.5} /> : <Moon size={18} strokeWidth={1.5} />}
-                    </button>
+
+                    {/* Right: GitHub, Dark Mode & Mobile Menu */}
+                    <div className="flex items-center gap-3">
+                        <a
+                            href="https://github.com/sayandeepdas02/portfolio"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2 text-muted-foreground hover:text-foreground transition-colors"
+                            aria-label="GitHub"
+                        >
+                            <Github size={18} strokeWidth={1.5} />
+                        </a>
+                        <button
+                            onClick={toggleTheme}
+                            className="p-2 text-muted-foreground hover:text-foreground transition-colors"
+                            aria-label="Toggle theme"
+                        >
+                            {isDark ? <Sun size={18} strokeWidth={1.5} /> : <Moon size={18} strokeWidth={1.5} />}
+                        </button>
+
+                        {/* Mobile Menu Toggle */}
+                        <button
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            className="md:hidden p-2 text-muted-foreground hover:text-foreground transition-colors"
+                            aria-label="Toggle menu"
+                        >
+                            {isMobileMenuOpen ? <X size={20} strokeWidth={1.5} /> : <Menu size={20} strokeWidth={1.5} />}
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </nav>
+
+                {/* Mobile Dropdown Menu */}
+                {isMobileMenuOpen && (
+                    <div className="md:hidden absolute top-14 left-0 right-0 bg-background border-b border-edge shadow-lg">
+                        <div className="mx-4 my-3 p-4 bg-background rounded-lg border border-edge shadow-sm">
+                            <button
+                                onClick={() => {
+                                    scrollToSection('projects');
+                                    setIsMobileMenuOpen(false);
+                                }}
+                                className="block w-full text-left py-3 text-base font-medium text-foreground hover:text-muted-foreground transition-colors"
+                            >
+                                Projects
+                            </button>
+                            <button
+                                onClick={() => {
+                                    scrollToSection('experience');
+                                    setIsMobileMenuOpen(false);
+                                }}
+                                className="block w-full text-left py-3 text-base font-medium text-foreground hover:text-muted-foreground transition-colors"
+                            >
+                                Experience
+                            </button>
+                            <button
+                                onClick={() => {
+                                    scrollToSection('education');
+                                    setIsMobileMenuOpen(false);
+                                }}
+                                className="block w-full text-left py-3 text-base font-medium text-foreground hover:text-muted-foreground transition-colors"
+                            >
+                                Education
+                            </button>
+                        </div>
+                    </div>
+                )}
+            </nav>
+        </>
     );
 }
