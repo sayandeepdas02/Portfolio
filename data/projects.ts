@@ -16,7 +16,7 @@ export const projects: Project[] = [
         details: [
             "Improved interviewer efficiency with session creation, shareable links, candidate tracking, and AI-driven evaluation, reducing manual review by 70%."
         ],
-        image: "/images/project-1.jpg",
+        image: "/logos/flux-hire-logo.png",
         techStack: ["React.js", "Redux", "Node.js", "OpenAI API", "Tailwind CSS"],
         githubUrl: "https://github.com/sayandeepdas02/Flux-Hire-AI",
     },
@@ -26,7 +26,7 @@ export const projects: Project[] = [
         details: [
             "Enhanced collaboration with low-latency, seamless communication, and responsive UI for cross-device use."
         ],
-        image: "/images/project-2.jpg",
+        image: "/logos/plixa-logo.png",
         techStack: ["JavaScript", "React.js", "Node.js", "Socket.io", "Express.js", "Tailwind CSS"],
         githubUrl: "https://github.com/sayandeepdas02/Plixa-Meetups",
     },
@@ -36,7 +36,7 @@ export const projects: Project[] = [
         details: [
             "Developed secure REST APIs and optimized MongoDB for efficient invoice management."
         ],
-        image: "/images/project-3.jpg",
+        image: "/logos/swift-invoice-logo.png",
         techStack: ["JavaScript", "React.js", "Node.js", "Socket.io", "Express.js", "Tailwind CSS"],
         githubUrl: "https://github.com/sayandeepdas02/Swift-Invoice",
     },
@@ -46,7 +46,7 @@ export const projects: Project[] = [
         details: [
             "Delivered engaging gameplay with risk-reward mechanics, transaction security, and responsive design using React and TypeScript."
         ],
-        image: "/images/project-4.jpg",
+        image: "/logos/plinko-logo.png",
         techStack: ["TypeScript", "React.js", "Node.js", "Express.js", "Tailwind CSS"],
         githubUrl: "https://github.com/sayandeepdas02/Plinko",
     },

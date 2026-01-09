@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Moon, Sun } from "lucide-react";
+import { Github, Moon, Sun, Calendar } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
@@ -63,6 +63,17 @@ export default function Navbar() {
                         Education
                     </button>
                 </div>
+
+                {/* Book a Call Button */}
+                <a
+                    href="https://cal.com/sayandeep-3n4b6i"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-3 py-1.5 text-[13px] font-medium bg-foreground text-background hover:bg-foreground/90 transition-colors rounded-md"
+                >
+                    <Calendar size={14} strokeWidth={2} />
+                    Book a Call
+                </a>
 
                 {/* Right: GitHub & Dark Mode */}
                 <div className="flex items-center gap-3">

@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Mail, Twitter, Code2 } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, Code2, Calendar } from "lucide-react";
 import { socialLinks, emailAddress } from "@/data/social";
 import { Panel } from "@/components/ui/panel";
 
@@ -46,6 +46,19 @@ export default function Footer() {
                             </a>
                         );
                     })}
+                </div>
+
+                {/* Book a Call CTA */}
+                <div className="my-4">
+                    <a
+                        href="https://cal.com/sayandeep-3n4b6i"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium bg-foreground text-background hover:bg-foreground/90 transition-colors rounded-md"
+                    >
+                        <Calendar size={16} strokeWidth={2} />
+                        Book a Call
+                    </a>
                 </div>
 
                 <p className="text-xs text-muted-foreground">
