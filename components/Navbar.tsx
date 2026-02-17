@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Moon, Sun, Calendar, Menu, X } from "lucide-react";
+import { Github, Moon, Sun, Calendar, Menu, X, Linkedin, Twitter, FileText } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
@@ -40,9 +40,7 @@ export default function Navbar() {
             <nav className="sticky top-0 z-50 backdrop-blur-md border-b border-edge bg-background/80">
                 <div className="px-4 h-14 flex items-center justify-between">
                     {/* Left: Portfolio Title */}
-                    <Link href="/" className="text-sm font-medium text-foreground hover:text-muted-foreground transition-colors">
-                        Portfolio
-                    </Link>
+
 
                     {/* Desktop: Center Navigation Links */}
                     <div className="hidden md:flex items-center gap-6">
@@ -67,15 +65,26 @@ export default function Navbar() {
                     </div>
 
                     {/* Desktop: Book a Call Button */}
-                    <a
-                        href="https://cal.com/sayandeep-3n4b6i"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hidden md:flex items-center gap-2 px-3 py-1.5 text-[13px] font-medium bg-foreground text-background hover:bg-foreground/90 transition-colors rounded-md"
-                    >
-                        <Calendar size={14} strokeWidth={2} />
-                        Book a Call
-                    </a>
+                    <div className="hidden md:flex items-center gap-2">
+                        <a
+                            href="https://cal.com/sayandeep-3n4b6i"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-3 py-1.5 text-[13px] font-medium bg-foreground text-background hover:bg-foreground/90 transition-colors rounded-md"
+                        >
+                            <Calendar size={14} strokeWidth={2} />
+                            Book a Call
+                        </a>
+                        <a
+                            href="https://drive.google.com/file/d/1T77FYg8U7HAIzrjffSiRsd5PMq_-n_3E/view?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-3 py-1.5 text-[13px] font-medium bg-foreground text-background hover:bg-foreground/90 transition-colors rounded-md"
+                        >
+                            <FileText size={14} strokeWidth={2} />
+                            Resume
+                        </a>
+                    </div>
 
                     {/* Right: GitHub, Dark Mode & Mobile Menu */}
                     <div className="flex items-center gap-3">
@@ -87,6 +96,24 @@ export default function Navbar() {
                             aria-label="GitHub"
                         >
                             <Github size={18} strokeWidth={1.5} />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/sayandeep02/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2 text-muted-foreground hover:text-foreground transition-colors"
+                            aria-label="LinkedIn"
+                        >
+                            <Linkedin size={18} strokeWidth={1.5} />
+                        </a>
+                        <a
+                            href="https://x.com/lifeofsayan"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2 text-muted-foreground hover:text-foreground transition-colors"
+                            aria-label="Twitter"
+                        >
+                            <Twitter size={18} strokeWidth={1.5} />
                         </a>
                         <button
                             onClick={toggleTheme}
