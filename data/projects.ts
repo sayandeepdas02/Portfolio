@@ -11,14 +11,14 @@ export interface Project {
 
 export const projects: Project[] = [
     {
-        name: "Fluxhire AI - Automating Interviews for Hiring Process",
+        name: "Interview AI - Automating Screening for Hiring Talent",
         description: "Built an AI-powered interview platform with resume parsing, dynamic Q&A, and automated scoring using React, Redux, and OpenAI GPT models.",
         details: [
             "Improved interviewer efficiency with session creation, shareable links, candidate tracking, and AI-driven evaluation, reducing manual review by 70%."
         ],
         image: "/logos/flux-hire-logo.png",
         techStack: ["React.js", "Redux", "Node.js", "OpenAI API", "Tailwind CSS"],
-        githubUrl: "https://github.com/sayandeepdas02/Flux-Hire-AI",
+        githubUrl: "https://github.com/sayandeepdas02/Interview-AI",
     },
     {
         name: "Plixa Meetups - A collaborative app for discussions, planning and more",
@@ -40,16 +40,7 @@ export const projects: Project[] = [
         techStack: ["JavaScript", "React.js", "Node.js", "Socket.io", "Express.js", "Tailwind CSS"],
         githubUrl: "https://github.com/sayandeepdas02/Swift-Invoice",
     },
-    {
-        name: "Plinko - A game built using physics logic for gambling",
-        description: "Built an interactive physics-based Plinko game with real-time win/loss logic, secure authentication, and betting mechanics.",
-        details: [
-            "Delivered engaging gameplay with risk-reward mechanics, transaction security, and responsive design using React and TypeScript."
-        ],
-        image: "/logos/plinko-logo.png",
-        techStack: ["TypeScript", "React.js", "Node.js", "Express.js", "Tailwind CSS"],
-        githubUrl: "https://github.com/sayandeepdas02/Plinko",
-    },
+    
 ];
 
 
