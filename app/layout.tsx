@@ -1,16 +1,11 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans } from "next/font/google";
-import { GeistMono } from "geist/font/mono";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 
-const fontSans = IBM_Plex_Sans({
-  weight: ["400", "500", "600"],
-  display: "swap",
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-manrope",
 });
-
-const fontMono = GeistMono;
 
 export const metadata: Metadata = {
   title: "Sayandeep Das | Software Engineer",
@@ -23,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${fontSans.variable} ${fontMono.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${manrope.variable}`} suppressHydrationWarning>
       <body>{children}</body>
     </html>
   );

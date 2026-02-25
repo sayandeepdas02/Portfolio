@@ -31,8 +31,8 @@
   --color-selection: var(--selection);
   --color-selection-foreground: var(--selection-foreground);
 
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-manrope);
+  --font-mono: var(--font-manrope);
 
   --animate-fade-in: fade-in var(--tw-duration, 200ms) ease-out;
   --animate-fade-out: fade-out var(--tw-duration, 200ms) ease-out;
@@ -49,6 +49,7 @@
     from {
       opacity: 0;
     }
+
     to {
       opacity: 1;
     }
@@ -58,6 +59,7 @@
     from {
       opacity: 1;
     }
+
     to {
       opacity: 0;
     }
@@ -67,6 +69,7 @@
     from {
       height: 0;
     }
+
     to {
       height: var(--radix-collapsible-content-height);
     }
@@ -76,15 +79,32 @@
     from {
       height: var(--radix-collapsible-content-height);
     }
+
     to {
       height: 0;
     }
   }
+
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 30s linear infinite;
 }
 
 @utility no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 
   /* Hide scrollbar for Chrome, Safari and Opera */
   &::-webkit-scrollbar {
@@ -257,6 +277,7 @@
 }
 
 @layer base {
+
   *,
   ::after,
   ::before,
@@ -279,13 +300,16 @@
   ::-webkit-scrollbar {
     width: 5px;
   }
+
   ::-webkit-scrollbar-track {
     background: transparent;
   }
+
   ::-webkit-scrollbar-thumb {
     background: var(--border);
     border-radius: 5px;
   }
+
   * {
     scrollbar-width: thin;
     scrollbar-color: var(--border) transparent;

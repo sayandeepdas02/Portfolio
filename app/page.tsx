@@ -2,11 +2,13 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
 import Education from "@/components/Education";
 import Certifications from "@/components/Certifications";
 import Footer from "@/components/Footer";
 import { Separator } from "@/components/ui/separator";
+import { GithubGraph } from "@/components/GithubGraph";
+import { TechStack } from "@/components/TechStack";
+import { PomodoroTimer } from "@/components/PomodoroTimer";
 
 export default function Home() {
   return (
@@ -19,18 +21,23 @@ export default function Home() {
         <Experience />
         <Separator />
 
+
+        <Education />
+        <Separator />
+
         <Projects />
         <Separator />
 
-        <Skills />
+        <GithubGraph />
         <Separator />
 
-        <Education />
+        <TechStack />
         <Separator />
 
         <Certifications />
         <Separator />
 
+        <PomodoroTimer />
         <Footer />
       </div>
     </main>
